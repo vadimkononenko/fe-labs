@@ -2,34 +2,39 @@
     box-sizing: border-box;
 }
 
+.figures {
+    display: flex;
+    margin-top: 50px;
+}
+
 .square {
-    position: relative;
-    top: 100px;
-    left: 200px;
+    margin-left: 50px;
     width: 200px;
     height: 200px;
-    background-color: gainsboro;
+    background-color: #F2F2F2;
     border: 1px solid black;
     border-radius: 20px;
 }
 
-#dotTop {
+.pos-rel {
+    position: relative;
+}
+
+.dot-top-position {
     position: absolute;
     top: 5px;
     width: 20px;
     height: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 90px;
     background-color: red;
     border-radius: 50%;
     border: 1px solid black;
 }
 
-#dotBottom {
+.dot-bottom-position {
     position: absolute;
     bottom: 5px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 90px;
     width: 20px;
     height: 20px;
     background-color: red;
@@ -37,11 +42,10 @@
     border: 1px solid black;
 }
 
-#dotLeft {
+.dot-left-position {
     position: absolute;
     left: 5px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 90px;
     width: 20px;
     height: 20px;
     background-color: red;
@@ -49,11 +53,10 @@
     border: 1px solid black;
 }
 
-#dotRight {
+.dot-right-position {
     position: absolute;
     right: 5px;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 90px;
     width: 20px;
     height: 20px;
     background-color: red;
@@ -61,22 +64,70 @@
     border: 1px solid black;
 }
 
-#lineY {
+.line-y-position {
     position: absolute;
     top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 115px;
-    width: 7px;
+    left: 97px;
+    height: 105px;
+    width: 6px;
     background-color: black;
 }
 
-#lineX {
+.line-x-position {
     position: absolute;
     right: 35px;
-    top: 50%;
-    transform: translateY(-50%);
-    height: 7px;
-    width: 85px;
+    top: 97px;
+    height: 6px;
+    width: 80px;
     background-color: black;
+}
+
+.dot-top-transform {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    border: 1px solid black;
+    transform: translate(90px, 5px);
+}
+
+.dot-bottom-transform {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    border: 1px solid black;
+    transform: translate(90px, 134px);
+}
+
+.dot-left-transform {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    border: 1px solid black;
+    transform: translate(5px, 30px);
+}
+
+.dot-right-transform {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    border: 1px solid black;
+    transform: translate(173px, 69px);
+}
+
+.line-y-transform {
+    height: 105px;
+    width: 6px;
+    background-color: black;
+    transform: translate(97px, -70px);
+}
+
+.line-x-transform {
+    height: 6px;
+    width: 80px;
+    background-color: black;
+    transform: translate(83px, 15px);
 }
