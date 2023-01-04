@@ -12,7 +12,7 @@
 
 <div class="task1">
     <div class="form-container">
-        <form>
+        <form id="myCustomForm">
             <h3>Форма для заповнення</h3>
 
             <div class="form-group">
@@ -40,11 +40,19 @@
                 <input type="text" placeholder="Адреса" id="address" name="address">
             </div>
 
-            <button type="submit">Підтвердити</button>
+            <button type="submit" onclick="validateForm()" >Підтвердити</button>
         </form>
     </div>
-</div>
 
+    <div class="user-info">
+        <h3>Введені данні</h3>
+        <p><b>ПІБ:</b> <span id="user-fullName"></span></p>
+        <p><b>Варіант:</b> <span id="user-variant"></span></p>
+        <p><b>Телефон:</b> <span id="user-phoneNumber"></span></p>
+        <p><b>Факультет:</b> <span id="user-faculty"></span></p>
+        <p><b>Адреса:</b> <span id="user-address"></span></p>
+    </div>
+</div>
 
 <script src="script.js"></script>
 </body>
