@@ -23,11 +23,11 @@ myCustomForm.addEventListener('submit', function (event) {
     const facultyPattern = /^[А-ЯІЇЄ]{1,4}$/;
     const addressPattern = /^[А-ЯІЇЄа-яіїє]+([ А-ЯІЇЄа-яіїє]+)?(\\,)? \d{1,4}([а-яіїє])?$/;
 
-    const fullName = document.getElementById("fullName")
-    const variant = document.getElementById("variant")
-    const phoneNumber = document.getElementById("phoneNumber")
-    const faculty = document.getElementById("faculty")
-    const address = document.getElementById("address")
+    const fullName = document.getElementById("fullName");
+    const variant = document.getElementById("variant");
+    const phoneNumber = document.getElementById("phoneNumber");
+    const faculty = document.getElementById("faculty");
+    const address = document.getElementById("address");
 
     let userFullName = document.getElementById("user-fullName");
     let userVariant = document.getElementById("user-variant");
@@ -48,6 +48,59 @@ myCustomForm.addEventListener('submit', function (event) {
         userFaculty.innerHTML = faculty.value;
         userAddress.innerHTML = address.value;
     } else {
-        alert("Введіть корректні данні!")
+        alert("Введіть корректні данні!");
     }
 })
+
+// TASK 2
+
+let task2 = document.querySelector(".task2");
+let colorPicker = document.getElementById("colorPicker");
+
+createTable();
+
+let myCell = document.getElementById("7");
+myCell.addEventListener("mouseover", changeColor);
+myCell.addEventListener("click", changeColorSelected);
+myCell.addEventListener("dblclick", changeRowsColor);
+
+function createTable() {
+    let table = document.createElement("table");
+    table.classList.add("myCustomTable");
+
+    for(let i = 0; i < 6; i++) {
+        let tr = document.createElement("tr");
+        for (let j = 0; j < 6; j++) {
+            let td = document.createElement("td");
+            let number = j + 1 + i * 6;
+            td.innerHTML = number + "";
+            td.id = number + "";
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+    }
+    task2.appendChild(table);
+}
+
+function randomColor() {
+    return Math.floor(Math.random() * 255);
+}
+
+function changeColor() {
+    myCell.style.backgroundColor = 'rgb(' + randomColor() + "," + randomColor() + "," + randomColor() + ')';
+}
+
+function changeColorSelected() {
+    myCell.style.backgroundColor = colorPicker.value;
+}
+
+function changeRowsColor() {
+    for (let i = 1; i < 6;) {
+        for (let j = 0; j < 6; j++) {
+            let id = j + 1 + i * 6;
+            let cell = document.getElementById(id + "");
+            cell.style.backgroundColor = colorPicker.value;
+        }
+        i += 2;
+    }
+}
