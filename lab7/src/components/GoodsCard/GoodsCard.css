@@ -1,0 +1,21 @@
+.GoodsCard {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    height: 300px;
+    /*padding: 0 50px;*/
+    gap: 10px;
+}
+
+.GoodsCard img {
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.GoodsCard button {
+    border-radius: 5px;
+    border-width: 1px;
+    background-color: #ff9999;
+    border-color: #ff0000;
+}
